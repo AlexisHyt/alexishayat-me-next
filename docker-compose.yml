@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  alexishayat-me-next:
+    build: .
+    container_name: alexishayat-me-next
+    restart: unless-stopped
+    ports:
+      - "3010:3010"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
