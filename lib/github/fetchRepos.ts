@@ -6,6 +6,7 @@ const getRequest = async (url: string) => {
     headers: {
       Authorization: `Bearer ${process.env.MY_GITHUB_TOKEN}`,
     },
+    next: { revalidate: 3600 }, // cache d'1 heure
   });
 
   return await response.json();
