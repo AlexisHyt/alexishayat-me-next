@@ -1,9 +1,7 @@
 "use client";
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { LuArrowUpRight } from "react-icons/lu";
-import { Button } from "@/components/ui/button";
 import { getLangColor } from "@/lib/projectLanguagesMap";
+import type { GitHubRepositoryWithLanguages } from "@/types/github";
 
 const PAGE_SIZE = 5;
 const MAX_VISIBLE_PAGES = 5;

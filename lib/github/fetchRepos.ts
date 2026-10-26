@@ -1,5 +1,10 @@
 "use server";
 
+import type {
+  GitHubRepository,
+  GitHubRepositoryWithLanguages,
+} from "@/types/github";
+
 const getRequest = async (url: string) => {
   const response = await fetch(url, {
     method: "GET",

@@ -1,8 +1,8 @@
-interface GitHubRepositoryWithLanguages extends GitHubRepository {
+export interface GitHubRepositoryWithLanguages extends GitHubRepository {
   languages: Record<string, string>;
 }
 
-interface GitHubRepository {
+export interface GitHubRepository {
   id: number;
   node_id: string;
   name: string;
